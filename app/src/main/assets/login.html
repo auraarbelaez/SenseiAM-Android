@@ -1,40 +1,41 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inicio de Sesión - El hogar de Sensei</title>
-  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
 <header class="Header-Inicio"></header>
 <h1>¡Bienvenido de nuevo!</h1>
-<form action="YOUR_LOGIN_PROCESSING_URL" method="POST"> <!-- Replace with your server URL -->
+<form id="loginForm">
   <label for="emailInput">Correo Electrónico</label>
-  <input type="email" id="emailInput" name="email" placeholder="ejemplo@dominio.com" maxlength="40" required />
+  <input type="email" id="emailInput" name="email" placeholder="ejemplo@dominio.com" maxlength="40" required>
   <label for="passwordInput">Contraseña</label>
-  <input type="password" id="passwordInput" name="password" maxlength="16" required />
+  <input type="password" id="passwordInput" name="password" maxlength="16" required>
   <button type="submit" class="button" id="IS">Iniciar Sesión</button>
 </form>
 <a href="forgetpw.html" class="buttonfp" id="forgotpw">¿Olvidaste tu contraseña?</a>
 <div class="container">
   <span class="inline-text spacer">¿Eres nuevo?</span>
-  <a href="REGISTER_URL" class="inline-text signup-link">Regístrate Aquí</a> <!-- Replace with your registration URL -->
+  <a href="register.html" class="inline-text signup-link">Regístrate Aquí</a>
 </div>
 <div class="separator">
   <div class="separator-icon"></div>
 </div>
 <div class="container-fb">
-  <a href="FACEBOOK_LOGIN_URL" class="fb">Inicia Sesión con Facebook</a> <!-- Replace with your Facebook login URL -->
-  <img src="src/facebook.png" alt="Facebook Icon" class="fb-icon" /> <!-- Replace with actual path -->
+  <a href="#" class="fb">Inicia Sesión con Facebook</a>
+  <img src="src/facebook.png" alt="Facebook Icon" class="fb-icon">
 </div>
 <div class="container-apple">
-  <a href="APPLE_LOGIN_URL" class="apple"> <!-- Replace with your Apple login URL -->
-    <img src="src/apple.png" alt="Apple Icon" class="apple-icon" /> <!-- Replace with actual path -->
+  <a href="#" class="apple">
+    <img src="src/apple.png" alt="Apple Icon" class="apple-icon">
     Sign in with Apple
   </a>
 </div>
 
 <script src="scripts/main.js"></script>
+<script src="scripts/login.js"></script>
 </body>
 </html>
