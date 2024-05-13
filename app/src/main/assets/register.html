@@ -6,14 +6,13 @@
     <title>Registro - El hogar de Sensei</title>
     <link
       rel="stylesheet"
-      href="{{ url_for('static',
-    filename='styles/main.css') }}"
+      href="styles/main.css"
     />
   </head>
 
   <body>
     <header class="Header-Inicio"></header>
-    <form action="{{ url_for('register') }}" method="POST">
+    <form action="" method="POST">
       <label for="name">Nombre Completo</label>
       <input
         type="text"
@@ -64,7 +63,6 @@
 
     <footer class="Footer-Inicio"></footer>
 
-    <script src="{{ url_for('static',
-    filename='scripts/main.js') }}"></script>
+    <script src="scripts/main.js"></script>
   </body>
 </html>

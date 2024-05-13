@@ -1,65 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inicio de Sesion - El hogar de Sensei</title>
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='styles/main.css')}}"
-    />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio de Sesión - El hogar de Sensei</title>
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+<header class="Header-Inicio"></header>
+<h1>¡Bienvenido de nuevo!</h1>
+<form action="YOUR_LOGIN_PROCESSING_URL" method="POST"> <!-- Replace with your server URL -->
+  <label for="emailInput">Correo Electrónico</label>
+  <input type="email" id="emailInput" name="email" placeholder="ejemplo@dominio.com" maxlength="40" required />
+  <label for="passwordInput">Contraseña</label>
+  <input type="password" id="passwordInput" name="password" maxlength="16" required />
+  <button type="submit" class="button" id="IS">Iniciar Sesión</button>
+</form>
+<a href="forgetpw.html" class="buttonfp" id="forgotpw">¿Olvidaste tu contraseña?</a>
+<div class="container">
+  <span class="inline-text spacer">¿Eres nuevo?</span>
+  <a href="REGISTER_URL" class="inline-text signup-link">Regístrate Aquí</a> <!-- Replace with your registration URL -->
+</div>
+<div class="separator">
+  <div class="separator-icon"></div>
+</div>
+<div class="container-fb">
+  <a href="FACEBOOK_LOGIN_URL" class="fb">Inicia Sesión con Facebook</a> <!-- Replace with your Facebook login URL -->
+  <img src="src/facebook.png" alt="Facebook Icon" class="fb-icon" /> <!-- Replace with actual path -->
+</div>
+<div class="container-apple">
+  <a href="APPLE_LOGIN_URL" class="apple"> <!-- Replace with your Apple login URL -->
+    <img src="src/apple.png" alt="Apple Icon" class="apple-icon" /> <!-- Replace with actual path -->
+    Sign in with Apple
+  </a>
+</div>
 
-  <body>
-    <header class="Header-Inicio"></header>
-    <h1>¡Bienvenido de nuevo!</h1>
-    <form action="{{ url_for('login') }}" method="POST">
-      <label for="emailInput">Correo Electrónico</label>
-      <input
-        type="email"
-        id="emailInput"
-        name="email"
-        placeholder="ejemplo@dominio.com"
-        maxlength="40"
-      />
-      <label for="passwordInput">Contraseña</label>
-      <input
-        type="password"
-        id="passwordInput"
-        name="password"
-        maxlength="16"
-      />
-      <button type="submit" class="button" id="IS">Iniciar Sesión</button>
-    </form>
-    <a href="Vistas/forgetpw.html" class="buttonfp" id="forgotpw"
-      >¿Olvidaste tu contraseña?</a
-    >
-    <div class="container">
-      <span class="inline-text spacer">¿Eres nuevo?</span>
-      <a href="{{ url_for('register')}}" class="inline-text signup-link"
-        >Registrate Aquí</a
-      >
-    </div>
-    <div class="separator">
-      <div class="separator-icon"></div>
-    </div>
-    <div class="container-fb">
-      <a href="" class="fb">Inicia Sesion con Facebook</a>
-      <img
-        src="{{ url_for('static', filename='src/facebook.png')}}"
-        class="fb-icon"
-      />
-    </div>
-    <div class="container-apple">
-      <a href="" class="apple">
-        <img
-          src="{{ url_for('static', filename='src/apple.png')}}"
-          class="apple-icon"
-        />
-        Sign in with apple
-      </a>
-    </div>
-
-    <script src="{{ url_for('static', filename='scripts/main.js') }}"></script>
-  </body>
+<script src="scripts/main.js"></script>
+</body>
 </html>

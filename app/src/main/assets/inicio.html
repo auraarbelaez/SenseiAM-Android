@@ -6,7 +6,7 @@
     <title>Inicio - El Hogar de Sensei</title>
     <link
       rel="stylesheet"
-      href="{{ url_for('static', filename='styles/main.css')}}"
+      href="styles/main.css"
     />
   </head>
 
@@ -16,17 +16,17 @@
 
       <main>
         <img
-          src="{{ url_for('static', filename='src/Logo.png')}}"
+          src="src/Logo.png"
           class="logo"
         />
-        <a href="{{ url_for('register') }}" class="button" id="CC"
+        <a href="register.html" class="button" id="CC"
           >Crear cuenta</a
         >
-        <a href="{{ url_for('login') }}" class="button" id="IS"
+        <a href="login.html" class="button" id="IS"
           >Inicio de Sesión</a
         >
         <a
-          href="/Aplicaciones Moviles/AM-Sensei/Vistas/home-1.html"
+          href="home-1.html"
           class="button"
           id="IcI"
           >Ingresar como invitado</a
@@ -36,7 +36,6 @@
       <footer class="Footer-Inicio"></footer>
     </div>
 
-    <script src="{{ url_for('static',
-    filename='scripts/main.js') }}"></script>
+    <script src="scripts/main.js"></script>
   </body>
 </html>
