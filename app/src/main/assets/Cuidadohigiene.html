@@ -6,7 +6,7 @@
     <title>Cuidado e Higiene - El hogar de Sensei</title>
     <link
       rel="stylesheet"
-      href="{{ url_for('static', filename='styles/main.css')}}"
+      href="styles/main.css"
     />
   </head>
 
@@ -14,7 +14,7 @@
     <div class="header-home">
       <div class="logo-slogan">
         <img
-          src="{{ url_for('static', filename='src/logo.png') }}"
+          src="src/Logo.png"
           class="logo"
         />
         <div>
@@ -31,7 +31,7 @@
         <button class="cart-button">
           <img
             class="carrito-img"
-            src="{{ url_for('static', filename='src/carrito.png') }}"
+            src="src/carrito.png"
             alt="Carrito"
           />
         </button>
@@ -257,38 +257,38 @@
     <!-- Navigation bar (footer) -->
     <ul class="nav-bar">
       <li>
-        <a href="{{ url_for('home_1') }}"
-          ><img
-            src="{{ url_for('static', filename='src/logo.png') }}"
-            class="Inicio"
-          />Inicio</a
+        <a href="home-1.html"
+        ><img
+                src="src/Logo.png"
+                class="Inicio"
+        />Inicio</a
         >
       </li>
       <li>
-        <a href="{{ url_for('miscompras') }}"
-          ><img src="{{ url_for('static', filename='src/compras.png') }}" /> Mis
+        <a href="mis_compras.html"
+        ><img src="src/compras.png" /> Mis
           Compras</a
         >
       </li>
       <li>
-        <a href="{{ url_for('promociones') }}"
-          ><img src="{{ url_for('static', filename='src/descuento.png') }}" />
+        <a href="Promociones.html"
+        ><img src="src/descuento.png" />
           Promociones</a
         >
       </li>
       <li>
-        <a href="{{ url_for('membresia') }}"
-          ><img src="{{ url_for('static', filename='src/membresia.png') }}" />
+        <a href="Membresia.html"
+        ><img src="src/membresia.png" />
           Membresía</a
         >
       </li>
       <li>
-        <a href="{{ url_for('cuenta') }}"
-          ><img src="{{ url_for('static', filename='src/cuenta.png') }}" />
+        <a href="Cuenta.html"
+        ><img src="src/cuenta.png" />
           Cuenta</a
         >
       </li>
     </ul>
-    <script src="{{ url_for('static', filename='scripts/main.js') }}"></script>
+    <script src="scripts/main.js"></script>
   </body>
 </html>

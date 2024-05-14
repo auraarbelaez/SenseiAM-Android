@@ -27,19 +27,19 @@ class RegisterActivity : AppCompatActivity() {
         webView.webViewClient = WebViewClient()
 
         // Ensure the correct setup of the JavaScript interface
-        webView.addJavascriptInterface(WebAppInterface(this), "Android")
+        val androidJSInterface = AndroidJSInterface(this, sharedPreferences)
+        webView.addJavascriptInterface(androidJSInterface, "Android")
         webView.loadUrl("file:///android_asset/register.html")
     }
 
-    class WebAppInterface(private val context: Context) {
-
-        private val sharedPreferences: SharedPreferences = context.getSharedPreferences("UserPrefs", Context.MODE_PRIVATE)
+    class AndroidJSInterface(private val context: Context, private val sharedPreferences: SharedPreferences) {
 
         @JavascriptInterface
         fun saveUserData(userData: String) {
             val editor = sharedPreferences.edit()
             editor.putString("userData", userData)
             editor.apply()
+
             // Start the LoginActivity
             val intent = Intent(context, LoginActivity::class.java)
             context.startActivity(intent)

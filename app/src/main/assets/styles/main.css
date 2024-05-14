@@ -5,24 +5,23 @@
   font-style: normal;
 }
 
-html {
-  height: 800px;
+
+html, body {
+  height: 100%;
+  width: 100%;
   margin: 0;
-  /* Oculta el desbordamiento de la página */
   display: flex;
-  justify-content: center;
   align-items: center;
-  /* Establece el color de fondo de la página */
+  background-color: #f4f4f4;
+  font-family: "Inder", sans-serif;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  flex-direction: column;
 }
 
-body {
-  font-family: "Inder", sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-  width: 360px;
-  height: 800px;
-  padding-bottom: 80px;
+.contenedor-app {
+    width:100%;
+    height: auto;
 }
 
 .Subtitulo {
@@ -149,79 +148,52 @@ body {
 }
 
 .nav-bar {
-  background-color: #2cb6be;
-  position: sticky;
-  bottom: 0;
-  z-index: 2;
-  /* Your desired background color */
-  border-top-right-radius: 25px;
-  border-top-left-radius: 25px;
-  /* Rounded corners */
-  display: flex;
-  /* Use flexbox for alignment */
-  justify-content: space-around;
-  /* Evenly space the items */
-  /* Some padding around the items */
-  /* Margin around the navigation bar */
-  list-style-type: none;
-  /* Remove default list styles */
-  width: 360px;
-  height: 80px;
-  box-shadow: 0px -4px 6px -1px rgba(140, 133, 191, 1);
-  padding-left: 0;
-  margin-left: 0;
-  padding-bottom: 0px;
-  margin-bottom: 0px;
+    background-color: #2cb6be;
+    position: fixed;
+    bottom: 0;
+    z-index: 2;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    display: flex;
+    justify-content: space-between; /* Ensures even spacing between items */
+    align-items: center;
+    width: 100%; /* Ensures the navbar spans the full width of the viewport */
+    height: 80px;
+    box-shadow: 0px -4px 6px -1px rgba(140, 133, 191, 1);
+    padding: 0 10px; /* Adjust padding as needed */
+    list-style-type: none;
+    margin-left: 10px;
 }
 
 .nav-bar li {
-  display: inline;
-  /* Display list items inline */
-  padding: 0;
-  margin: 0;
-  margin-top: 5px;
+    flex: 1; /* Ensures even spacing between items */
+    text-align: center; /* Centers text in each list item */
+    margin: 5px;
 }
 
 .nav-bar a {
-  text-decoration: none;
-  /* Remove underline from links */
-  color: white;
-  /* Text color for links */
-  font-family: Arial, sans-serif;
-  /* Font style for links */
-  display: flex;
-  /* Use flex to align icon and text */
-  align-items: center;
-  /* Align items vertically */
-  gap: 5px;
-  /* Space between icon and text */
-  font-size: 10px;
-  flex-direction: column;
-  height: 80px;
-  margin-top: 5px;
+    text-decoration: none;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    font-size: 10px;
+    height: 80px;
+    padding: 10px;
 }
 
 .nav-bar img {
-  width: 50px;
-  /* Example size, adjust as needed */
-  height: 50px;
-  /* Maintain aspect ratio */
+    width: 30px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+    margin-bottom: 5px; /* Space between image and text */
 }
 
-.nav-bar img.Inicio {
-  margin-bottom: 0px;
-  justify-items: center;
-  width: 50px;
-  height: 50px;
-}
-
-/* Hover effect for the links */
+/* Additional styling for hover effect */
 .nav-bar a:hover {
-  border: 1px solid rgba(203, 201, 224, 0.8);
-  /* White border on hover */
-  border-radius: 10px;
-  /* Rounded corners for the border */
-  /* Adjust padding to maintain the overall size */
+    border: 1px solid rgba(203, 201, 224, 0.8);
+    border-radius: 10px;
 }
 
 .header {
@@ -235,6 +207,7 @@ body {
   display: flex;
   align-items: center;
   height: 80px;
+  width: 100%;
   flex-direction: row;
   /* Align children vertically */
   justify-content: flex-start;
@@ -246,6 +219,8 @@ body {
   background-color: #2cb6be;
   color: white;
   padding-top: 80px;
+  padding-left: 40px;
+  padding-right: 40px;
   padding-bottom: 0px;
   text-align: center;
   border-bottom-left-radius: 25px;
@@ -322,7 +297,7 @@ body {
   border-color: rgba(37, 133, 138, 75%);
   border-radius: 5px;
   /* Para bordes redondeados */
-  background-image: url("/static/src/lupita.png");
+  background-image: url("src/lupita.png");
   background-position: 10px center;
   background-repeat: no-repeat;
   transition: background-image 0.5s ease-in-out, background-position 0.5s ease,
@@ -384,8 +359,12 @@ body {
 
 .Header-Inicio {
   top: 0px;
+  width: 100%;
+  max-width:360px;
   margin-top: 40px;
   height: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
   background-color: #2cb6be;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
@@ -400,7 +379,7 @@ body {
 .Footer-Inicio {
   background-color: #2cb6be;
   position: sticky;
-  bottom: 0;
+  bottom: 0px;
   z-index: 2;
   /* Your desired background color */
   border-top-right-radius: 25px;
@@ -414,10 +393,9 @@ body {
   /* Margin around the navigation bar */
   list-style-type: none;
   /* Remove default list styles */
-  width: 360px;
+  width: 100%;
   height: 80px;
   box-shadow: 0px -4px 6px -1px rgba(140, 133, 191, 1);
-  padding-left: 0;
   margin-left: 0;
   padding-bottom: 0px;
   margin-bottom: 0px;
@@ -688,7 +666,7 @@ footer {
   margin-left: 20px;
   margin-right: 20px;
   padding-top: 5px;
-  max-width: 360px;
+  max-width: auto;
   padding-bottom: 60px;
 }
 
@@ -849,7 +827,7 @@ img.logo {
 
 .separator {
   display: flex;
-  width: 360px;
+  width: auto;
   align-items: center;
   text-align: center;
   margin-top: 20px;
@@ -884,10 +862,9 @@ img.logo {
 }
 
 h1 {
-  width: 300px;
+  width: 100%;
   height: auto;
   font-size: 20px;
-  margin-left: 30px;
   margin-top: 40px;
   text-align: center;
   display: block;
@@ -1171,7 +1148,8 @@ input[type="radio"] {
 }
 
 html {
-  height: 800px;
+  height: 100%;
+  width: 100%;
   margin: 0;
   /* Oculta el desbordamiento de la página */
   display: flex;
@@ -1185,8 +1163,11 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
-  width: 360px;
-  height: 800px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   padding-bottom: 80px;
 }
 
@@ -1330,10 +1311,11 @@ body {
   /* Margin around the navigation bar */
   list-style-type: none;
   /* Remove default list styles */
-  width: 360px;
+  width: auto;
   height: 80px;
   box-shadow: 0px -4px 6px -1px rgba(140, 133, 191, 1);
-  padding-left: 0;
+  padding-left: 12px;
+  padding-right: 12px;
   margin-left: 0;
   padding-bottom: 0px;
   margin-bottom: 0px;
